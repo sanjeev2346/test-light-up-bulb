@@ -1,0 +1,17 @@
+N=int(input())  # Writing output to STDOUT
+list=[]
+for i in range (N):
+     x,y=[int(x) for x in input().split()]
+     list.append([x,y])
+def dist(x,y):
+     print(x,y)
+     d=(((x[0]+x[1])**2)+((y[0]+y[1])**2))**(1/2) 
+     return d
+
+sol =0
+for i in range (0,N-1):
+
+   a=dist(list[i],list[i+1])
+   print(a)
+   sol = sol+a**2
+print(sol)
